@@ -1,0 +1,101 @@
+package com.nit;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Student {
+	
+	
+	private String name;
+    private int age;
+    private String gender;
+    private int className;
+    private String address;
+
+    public Student(String name, int age, String gender, int className, String address) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.className = className;
+        this.address = address;
+    }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getClassName() {
+        return className;
+    }
+
+    public void setClassName(int className) {
+        this.className = className;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +"name='" + name + '\'' + ", age=" + age +
+                ", gender='" + gender + '\'' +
+                ", className='" + className + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
+
+
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		
+		 List<Student> student1 = new ArrayList<>();
+
+	        // Adding students
+	        student1.add(new Student("Tanmay Singh",15 , "Male", 9, "Akbarpur"));
+	        student1.add(new Student("Shubh Singh", 11, "Male", 27, "Akbarpur"));
+	        student1.add(new Student("Samriddh Singh", 8, "Male", 18, "Akbarpur"));
+	        student1.add(new Student("Hridyansh Singh", 19, "Male", 21, "Akbarpur"));
+
+
+	      
+	        Collections.sort(student1, Comparator.comparing(Student::getName));
+
+	        
+	        for (Student student : student1) {
+	            System.out.println(student);
+	        }
+	    }
+	
+
+	}
+
+

@@ -1,0 +1,41 @@
+-- Create the student table
+CREATE TABLE Students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    gender VARCHAR(10),
+    class VARCHAR(20),
+    address VARCHAR(100)
+);
+
+-- Insert some sample data
+INSERT INTO Students (name, age, gender, class, address) VALUES
+('Aps', 17, 'Male', '10th', 'UP'),
+('Gps', 16, 'Female', '10th', 'UP'),
+('Kps', 15, 'Male', '9th', 'MP'),
+('Hps', 17, 'Female', '11th', 'MP'),
+('Mps', 16, 'Male', '11th', 'HYD'),
+('Sps', 15, 'Female', '9th', 'Tel'),
+('Dps', 16, 'Male', '10th', 'AP'),
+
+
+-- Query to get the count of males and females
+SELECT
+    gender,
+    COUNT(*) AS count
+FROM
+    Students
+GROUP BY
+    gender;
+
+//Output Male 4
+         Female 3
+
+
+
+
+
+
+
+
+

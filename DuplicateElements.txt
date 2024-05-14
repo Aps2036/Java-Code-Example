@@ -1,0 +1,30 @@
+// Sorting Using Java 8 Featers
+// Deletre Duplicate Elements
+package com.nit;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class DuplicateElement {
+
+	public static void main(String[] args) {
+		
+		                                                    
+        List<String> list = new ArrayList<>( Arrays.asList("Ashish","Tanmay","Ashish","Samriddh","Shubh","Shubh","Harsh","Hridyansh","Hridyansh" )); 
+                                                                   
+        System.out.println("ArrayList with duplicate Elements: "+ list); 
+        
+         
+        List<String> newList = list.stream().distinct().collect(Collectors.toList());  
+  
+                                            
+        System.out.println("ArrayList with duplicates removed: "+ newList); 
+    } 
+
+		// TODO Auto-generated method stub
+
+	}
+
+
