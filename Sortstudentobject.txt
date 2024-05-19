@@ -90,8 +90,11 @@ public class Student {
 	        Collections.sort(student1, Comparator.comparing(Student::getName));
 
 	        
-	        for (Student student : student1) {
+	  /*      for (Student student : student1) {
 	            System.out.println(student);
+*/
+         student1.forEach(student -> System.out.println(student));
+
 	        }
 	    }
 	
